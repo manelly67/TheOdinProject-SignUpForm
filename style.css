@@ -1,8 +1,246 @@
-.wrapper {
-	font-size: 40px;
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input, input:focus {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* hasta aqui el reseteo de los estilos prediseñados de los buscadores
+*/
+
+
+/* media view   */
+
+main {
+	width: 100%;
 }
 
 
-.content {
-	font-size: 20px;
+ @media screen and (min-width: 992px) {
+
+body{
+	margin: 0;
+    padding: 0;
+    border: 0px solid transparent;
+	background-color: black;
+	font-size: 14px;
+	font-family: Arial, sans-serif ;
 }
+
+
+
+.box {
+	--box1-width: 300px;
+	--margin-left: 300px;
+	--box-height: 610px;
+	--box2-width: 550px;
+}
+
+.box1 {
+	
+	width: var(--box1-width);
+	height: var(--box-height);
+	position: absolute;
+	left: var(--margin-left);
+	top: 0px;
+	background-image: url("halie-west-25xggax4bSA-unsplash.jpg");
+	background-size: 300px 610px;
+	background-repeat: no-repeat;
+	box-sizing: border-box;
+}
+
+.franja {
+	box-sizing: border-box;
+	padding-left: 20px;
+	width: var(--box1-width);
+	height: 120px;
+	background-color:rgba(33,40,26,0.5);
+	position: absolute;
+	top: calc(var(--box-height)*0.40);
+	display: flex;
+	flex-direction:row;
+    flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+@font-face {
+  font-family: my-cool-font;
+  src: url(Norse-Bold.otf);
+}
+
+h1 {
+  font-family: my-cool-font;
+  color: white;
+  font-size:4rem;
+  padding-left: 30px;
+  padding-top: 35px;
+}
+
+a {
+	color: white;
+}
+
+#piedepag{
+	color: white;
+	box-sizing: border-box;
+	position: absolute;
+	bottom: 20px;
+	left: 15px;
+}
+
+.box2 {
+	width: var(--box2-width);
+	height: var(--box-height);
+	position: absolute;
+	left: calc(var(--box1-width) + var(--margin-left));
+	top: 0px;
+	box-sizing: border-box;
+	background-color: #e3e0cc;
+}
+
+.presentacion{
+  box-sizing: border-box;
+  padding-top: 45px;
+  padding-left: 15px;
+  font-size: 1rem;
+  text-align: center-left;
+}
+
+
+
+.formBackground {
+	background-color: #f0efef;
+	font-size: 1rem;
+}
+
+.box2 >div{
+	
+	height: calc(var(--box-height)/3);	
+	
+}
+
+.box2 >div > form{
+	
+	box-sizing: border-box;
+	padding-left: 15px;	
+	font-size: 0.8rem;
+	
+		
+}
+
+.box2 >div > form > div > label{ 
+								text-shadow: 1px 0px 3px rgba(156,190,126,0.82);
+								}
+
+							
+.box2 >div > form > div > input{ 
+								height: 20px;
+								border-radius: 6px;
+								border: 2px solid #E5E7EB;
+								}
+
+.box2 >div > form > div > input:focus{ 
+								box-shadow: 3px 3px 5px 0px rgba(51,85,255,0.79);
+								border: 2px solid blue;
+								}
+
+
+[class^='input1']{
+				position: absolute;
+				top: 245px;
+				}
+[class^='label1']{
+				position: absolute;
+				top: 225px;
+				}
+[class^='input2']{
+				position: absolute;
+				top: 295px;
+				}
+[class^='label2']{
+				position: absolute;
+				top: 275px;
+				}
+[class^='input3']{
+				position: absolute;
+				top: 345px;
+				}
+[class^='label3']{
+				position: absolute;
+				top: 325px;
+				}				
+
+[class$='b']	{
+				position: absolute;
+				left: 275px;
+				}
+
+
+.myButton {
+	box-sizing: border-box;
+	position: relative;
+	left: 15px;
+	top: 25px;
+	background-color: #596D48; font-size: 16px; line-height: 16px; padding: 6px; border-radius: 10px; font-family: Georgia, serif; font-weight: normal; text-decoration: none; font-style: normal; font-variant: normal; text-transform: none; background-image: linear-gradient(to right, #596D48 0%, #7A9663 50%, #9CBE7E 100%); box-shadow: rgb(0, 0, 0) 5px 5px 10px 5px; border: 2px solid #596D48; display: inline-block;}
+.myButton:hover {
+background: #5B6F4A; }
+.myButton:active {
+background: #9CBE7E; }
+
+#already{
+	box-sizing: border-box;
+	position: relative;
+	left: 17px;
+	top: 43px;
+	font-size: 0.8rem;
+}
+
+.colorLogin {
+	color: #596D48 ;
+}
+
+
+
+ }
